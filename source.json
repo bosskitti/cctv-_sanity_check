@@ -1,0 +1,144 @@
+{
+  "brands": [
+    {
+      "name": "Tuya Smart",
+      "keys": ["tuya"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}",
+      "onvif_port": 80,
+      "default_user": "admin",
+      "default_pass": "123456",
+      "stream_main": "",
+      "stream_sub": ""
+    },
+    {
+      "name": "YOOSEE",
+      "keys": ["yoosee"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}/{stream}",
+      "onvif_port": 5000,
+      "default_user": "admin",
+      "default_pass": "123456",
+      "stream_main": "onvif1",
+      "stream_sub": "onvif2"
+    },
+    {
+      "name": "V380",
+      "keys": ["v380"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}//live/{stream}",
+      "onvif_port": 8899,
+      "default_user": "admin",
+      "default_pass": "admin",
+      "stream_main": "ch00_1",
+      "stream_sub": "ch00_0"
+    },
+    {
+      "name": "Hikvision",
+      "keys": ["hikvision", "hiwatch"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}/h264/ch{channel}/{stream}/av_stream",
+      "onvif_port": 80,
+      "default_user": "admin",
+      "default_pass": "12345",
+      "stream_main": "main",
+      "stream_sub": "sub"
+    },
+    {
+      "name": "Dahua",
+      "keys": ["dahua", "imou"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}/cam/realmonitor?channel={channel}&subtype={stream}",
+      "onvif_port": 80,
+      "default_user": "admin",
+      "default_pass": "admin",
+      "stream_main": "0",
+      "stream_sub": "1"
+    },
+    {
+      "name": "XMEYE",
+      "keys": ["xmeye"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{ip}:{port}/user={user}&password={password}&channel={channel}&stream={stream}.sdp?",
+      "onvif_port": 8899,
+      "default_user": "admin",
+      "default_pass": "",
+      "stream_main": "0",
+      "stream_sub": "1"
+    },
+    {
+      "name": "TOPSEE",
+      "keys": ["topsee"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}/{stream}",
+      "onvif_port": 80,
+      "default_user": "admin",
+      "default_pass": "123456",
+      "stream_main": "mpeg4",
+      "stream_sub": "mpeg4cif"
+    },
+    {
+      "name": "Jovision",
+      "keys": ["jovision"],
+      "rtsp_port": 8554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}/{stream}",
+      "default_user": "admin",
+      "default_pass": "",
+      "stream_main": "live1.264",
+      "stream_sub": "live0.264"
+    },
+    {
+      "name": "Juanvision",
+      "keys": ["juanvision"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}/{stream}",
+      "default_user": "admin",
+      "default_pass": "",
+      "stream_main": "ch0_0.264",
+      "stream_sub": "ch0_1.264"
+    },
+    {
+      "name": "Uniview",
+      "keys": ["uniview", "unv"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}/{stream}",
+      "onvif_port": 80,
+      "default_user": "admin",
+      "default_pass": "1111",
+      "stream_main": "video1",
+      "stream_sub": "video2"
+    },
+    {
+      "name": "tiandy",
+      "keys": ["tiandy"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}",
+      "onvif_port": 8080,
+      "default_user": "admin",
+      "default_pass": "1111",
+      "stream_main": "",
+      "stream_sub": ""
+    },
+    {
+      "name": "JVT",
+      "keys": ["jvt"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}/{stream}",
+      "onvif_port": 2000,
+      "default_user": "admin",
+      "default_pass": "admin",
+      "stream_main": "av0_0",
+      "stream_sub": "av0_1"
+    },
+    {
+      "name": "TP-Link",
+      "keys": ["tp-link", "tapo", "vigi"],
+      "rtsp_port": 554,
+      "rtsp_url_template": "rtsp://{user}:{password}@{ip}:{port}/{stream}",
+      "default_user": "admin",
+      "default_pass": "",
+      "stream_main": "stream1",
+      "stream_sub": "stream2"
+    }
+  ]
+}

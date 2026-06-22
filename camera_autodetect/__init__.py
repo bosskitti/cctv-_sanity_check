@@ -1,0 +1,1 @@
+"""Camera autodetect package."""

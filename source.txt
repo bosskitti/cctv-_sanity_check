@@ -1,0 +1,133 @@
+if no RTSP or ONVIF port information is listed below, then it means that it is not supported.
+
+  Tuya Smart
+  Tuya Smart
+  Tuya Smart camera is produced by many third-party manufacturers, and not all Tuya Smart cameras support RTSP or
+  ONVIF. It’s advisable to reach out to your camera vendor for more information about their specific product’s
+  capabilities.
+
+  RTSP Ports: 554
+  RTSP Url: rtsp://[camera ip]:[port]
+  Example URL: rtsp://192.168.1.2:554
+  HTTP web Port: 80
+  ONVIF Port: 80
+  Username: admin
+  Password: 123456 or no password
+  YOOSEE
+  YOOSEE
+
+  For yoosee cameras before 2021, you can connect directly to rtsp, for cameras after 2021 you need to open the ONVIF
+  settings in the app.Cameras & Camcorders
+
+  RTSP Ports: 554
+  RTSP Url: rtsp://[ip]:[port]/[Stream]
+  Stream: onvif1 – HD , onvif2 – SD
+  Example URL: rtsp://192.168.1.2:554/onvif1
+  ONVIF Port: 5000
+  Discover port: 3702
+  Username: admin or the ONVIF username you have set up
+  Password: 123456 or the ONVIF password you have set
+  V380 PRO
+  V380
+  Discover more
+  Home Automation
+  Computers & Electronics
+  software programs
+  V380 and V380 PRO ports are the sameCameras
+
+  RTSP Ports: 554
+  RTSP Url: rtsp://[ip]//live/[Stream]
+  Stream: ch00_1 – HD , ch00_0 – SD
+  Example URL: rtsp://192.168.1.2//live/ch00_1
+  ONVIF Port: 8899
+  Username: admin
+  Password: admin or the password you set
+  Hikvision
+  RTSP Ports: 554
+  RTSP Url: rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
+  codec: h264, MPEG-4, mpeg4
+  channel: Start at 1, for example, channel 1, then ch1.
+  subtype: stream type, the main stream is main, the secondary stream is sub.
+  Example URL: rtsp://admin:12345@192.1.1.2:554/h264/ch1/main/av_stream
+  HTTP web Port: 80
+  ONVIF Port: 80
+  HTTPS port: 443
+  Service port: 8000
+  Username: admin
+  Password: 12345 or the password you set
+  Dahua
+  RTSP Ports: 554
+  RTSP Url: rtsp://[username]:[password]@[ip]:[port]/cam/realmonitor?[channel=1]&[subtype=0]
+  channel: Starts at 1. For example, if channel 2, then channel=2.
+  subtype: The stream type, primary stream is 0, secondary stream is 1.
+  Example URL: rtsp://admin:admin@192.168.1.2:554/cam/realmonitor?channel=2&subtype=1
+  HTTP web Port: 80
+  ONVIF Port: 80
+  HTTPS port: 443
+  TCP port: 37777
+  UDP port: 37778
+  Username: admin
+  Password: admin
+  See also  How To Simply Find Hidden Cameras - Proven
+  xmeye
+  XMEYE
+  RTSP Ports: 554
+  RTSP Url: rtsp://[ip]:[port]/[user=admin]&[password=]&[channel=1]&[stream=0.sdp?]
+  channel=: Starts at 1. For example, if channel 2, then channel=2.
+  stream=The stream type, primary stream is 0, secondary stream is 1.
+  Example URL: rtsp://192.168.1.2:554/user=admin&password=&channel=1&stream=0.sdp?
+  HTTP web Port: 80
+  ONVIF Port: 8899
+  TCP port: 34567
+  Username: admin
+  Password: No password or the password you set
+  Image capture address: http://ip/webcapture.jpg?command=snap&channel=1
+  TOPSEE
+  RTSP Ports: 554
+  RTSP Url: rtsp://[ip]:[port]/[Stream]
+  Stream: Primary stream: mpeg4,Secondary stream: mpeg4cif
+  Example URL: rtsp://192.168.1.2:554/mpeg4
+  HTTP web Port: 80
+  ONVIF Port: 80
+  Data port: 8091
+  Username: admin
+  Password: 123456
+  Image capture address: http://ip/snapshot.cgi
+  Jovision
+  RTSP Ports: 8554
+  RTSP Url: rtsp://[ip]:[port]/[Stream]
+  Stream: Primary stream: live1.264,Secondary stream: live0.264
+  Example URL: rtsp://192.168.1.2:8554/live1.264
+  Username: admin
+  Password: No password or the password you set
+  Juanvision
+  RTSP Ports: 554
+  RTSP Url: rtsp://[ip]:[port]/[Stream]
+  Stream: Primary stream: ch0_0.264,Secondary stream: ch0_1.264
+  Username: admin
+  Password: No password or the password you set
+  Uniview
+  RTSP Ports: 554
+  RTSP Url: rtsp://[username]:[password]@[ip]:[port]/[Stream]
+  Stream: video1,video2,video3
+  Example URL: rtsp://admin:1111@192.168.1.2:554/video1
+  HTTP web Port: 80
+  ONVIF Port: 80
+  Https port: 110 or 443
+  Username: admin
+  Password: 1111 or the password you set
+  tiandy
+  RTSP Ports: 554
+  RTSP Url: rtsp://[ip]:[port]
+  Example URL: rtsp://192.168.1.2:554
+  ONVIF Port: 8080
+  Username: admin
+  Password: 1111 or the password you set
+  JVT
+  RTSP Ports: 554
+  RTSP Url: rtsp://[ip]/[Stream]
+  Stream: av0_0，av0_1
+  Example URL: rtsp://192.168.1.2:554/av0_0
+  ONVIF Port: 2000
+  Username: admin
+  Password: admin or the password you set

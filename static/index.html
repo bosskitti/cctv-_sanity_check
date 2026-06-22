@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Camera Autodetect</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <h1>Camera Autodetect</h1>
+          <p>ONVIF discovery, RTSP scan, credential verify</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="/dashboard.html" style="text-decoration: none;"><button type="button" class="btn-outline">Go to Dashboard</button></a>
+          <div class="status" id="appStatus">Ready</div>
+        </div>
+      </header>
+
+      <section class="toolbar">
+        <label>
+          Subnet
+          <input id="subnetInput" placeholder="192.168.1.0/24">
+        </label>
+        <label class="checkbox-label">
+          Use Cache
+          <input id="useCacheInput" type="checkbox" checked>
+        </label>
+        <label class="checkbox-label">
+          Show Only Cameras
+          <input id="filterCamerasInput" type="checkbox" checked>
+        </label>
+        <button id="scanButton" type="button">Scan</button>
+        <button id="verifyButton" type="button" disabled>Verify RTSP</button>
+      </section>
+
+      <!-- Progress Bar Section -->
+      <section class="progress-wrap" id="progressWrap" style="display: none;">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressBarFill" style="width: 0%;"></div>
+        </div>
+        <div class="progress-info">
+          <span id="progressMessage">Ready</span>
+          <strong id="progressPercent">0%</strong>
+        </div>
+      </section>
+
+      <section class="credentials" style="display: none;">
+        <div class="section-title">Default credentials</div>
+        <label>
+          RTSP User
+          <input id="rtspUserInput" autocomplete="username">
+        </label>
+        <label>
+          RTSP Password
+          <input id="rtspPasswordInput" type="password" autocomplete="current-password">
+        </label>
+        <label>
+          ONVIF User
+          <input id="onvifUserInput" autocomplete="username">
+        </label>
+        <label>
+          ONVIF Password
+          <input id="onvifPasswordInput" type="password" autocomplete="current-password">
+        </label>
+        <button id="applyCredsButton" type="button" disabled>Apply To Rows</button>
+      </section>
+
+      <section class="summary" id="summary">
+        <div><strong>0</strong><span>Devices</span></div>
+        <div><strong>0</strong><span>RTSP Open</span></div>
+        <div><strong>0</strong><span>ONVIF</span></div>
+        <div><strong>0</strong><span>Auth OK</span></div>
+      </section>
+
+      <section class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>IP</th>
+              <th>Network</th>
+              <th>Brand</th>
+              <th>Model</th>
+              <th>Status</th>
+              <th>Credentials</th>
+              <th>Endpoints</th>
+            </tr>
+          </thead>
+          <tbody id="deviceRows">
+            <tr class="empty-row">
+              <td colspan="7">ยังไม่มีข้อมูล กด Scan เพื่อค้นหากล้องในวง LAN</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <!-- Modal for Device Configuration -->
+    <div id="configModal" class="modal">
+      <div class="modal-content">
+        <header class="modal-header">
+          <h2 id="modalTitle">Configure Credentials</h2>
+          <button id="closeModalButton" class="close-button">&times;</button>
+        </header>
+        <div class="modal-body">
+          <div class="modal-device-info">
+            <strong id="modalDeviceIp"></strong> | <span id="modalDeviceBrand"></span> | <span id="modalDeviceModel"></span>
+            <div id="modalDevicePorts" class="modal-ports-list"></div>
+          </div>
+          <div class="modal-form-grid">
+            <div class="modal-form-group">
+              <h3>RTSP Credentials</h3>
+              <label>
+                Username
+                <input id="modalRtspUser" placeholder="admin">
+              </label>
+              <label>
+                Password
+                <input id="modalRtspPassword" type="password" placeholder="password">
+              </label>
+            </div>
+            <div class="modal-form-group">
+              <h3>ONVIF Credentials</h3>
+              <label>
+                Username
+                <input id="modalOnvifUser" placeholder="admin">
+              </label>
+              <label>
+                Password
+                <input id="modalOnvifPassword" type="password" placeholder="password">
+              </label>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-footer">
+          <button id="saveModalButton" class="btn-primary">Save & Apply</button>
+        </footer>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
